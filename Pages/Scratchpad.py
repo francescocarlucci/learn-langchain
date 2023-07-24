@@ -43,21 +43,21 @@ with st.form("prompt_templates"):
     text: ```{text}```
     """
 
+    prompt_template = ChatPromptTemplate.from_template(template_string)
+
     style = """American English \
     in a calm and respectful tone
     """
 
     text = st.text_area("Text to improve")
 
-    prompt_template = ChatPromptTemplate.from_template(template_string)
-
-    customer_messages = prompt_template.format_messages(style=style, text=text)
-
     execute = st.form_submit_button("🤓 Execute Code")
 
     if execute:
 
         chat = ChatOpenAI(temperature=0.5, openai_api_key=openai_api_key)
+
+        customer_messages = prompt_template.format_messages(style=style, text=text)
 
         response = chat(customer_messages)
 
