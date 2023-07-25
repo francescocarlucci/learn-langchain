@@ -5,7 +5,6 @@ from langchain.prompts import ChatPromptTemplate
 
 st.header('📝  Prompts and Parsers')
 
-
 st.write('''
 Prompts are another key component in LangChain and in general in Large Language Models.
 A well structured prompt can make all the difference in getting a quality outcome from
@@ -73,4 +72,11 @@ with st.form("prompt_templates"):
 
         st.code(response.content)
 
-        
+st.subheader('Advantages of Prompt Templates')
+
+st.write('''
+- Clarity: some prompts can be long and detailed, setting them up as template will make your code better
+- Reusability: many times you will be able to reuse existing templates with a few code changes
+- Simplicity: LangChain has some pre-built templates for common operations (We'll have a look at this later on)
+- Better output: you can instruct the LLM to return data with specific keywords, and parse the output as structured data instead of plain text to fit you app needs
+''')
