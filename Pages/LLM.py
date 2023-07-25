@@ -69,7 +69,7 @@ deepinfra_token = st.text_input("DeepInfra Api Key")
 
 model_id = st.selectbox(
     'Model',
-    ('databricks/dolly-v2-12b', 'google/flan-t5-xl')
+    ('databricks/dolly-v2-12b', 'meta-llama/Llama-2-7b-hf')
 )
 
 with st.form("deepinfra_llm"):
@@ -98,3 +98,15 @@ with st.expander("Code sample"):
 
         print(response)
     ''')
+
+st.subheader('LLMs vs ChatModels')
+
+st.write('''
+LLMs in LangChain refer to text completion models (text-in/text-out). However,
+some models require a more complex interface, they are trained specifically to
+have conversations and they take a list of chat messages as an input. These
+messages are usually labeled with the speaker (one of "System", "AI", and "Human").
+For example, GPT-4 is trained as chat model, while GPT-3 as a LLM. Chat models
+work very well with LangChain Prompt Templates, which we will see in the next
+section.
+''')
