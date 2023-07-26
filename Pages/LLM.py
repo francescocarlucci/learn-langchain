@@ -44,18 +44,16 @@ tools that will allow to build far more complex workflows. For now, let's apprec
 how we set it up using only 5 lines of code, and how easy is to plug in another model.
 ''')
 
-with st.expander("Code sample"):
+st.code('''
+    import openai
+    from langchain.llms import OpenAI
 
-    st.code('''
-        import openai
-        from langchain.llms import OpenAI
+    llm = OpenAI(openai_api_key=openai_key, temperature=0.5)
 
-        llm = OpenAI(openai_api_key=openai_key, temperature=0.5)
+    response = llm(your_prompt)
 
-        response = llm(your_prompt)
-
-        print(response)
-    ''')
+    print(response)
+''')
 
 st.subheader('DeepInfra LLM')
 
@@ -86,18 +84,16 @@ with st.form("deepinfra_llm"):
 
         st.code(response)
 
-with st.expander("Code sample"):
+st.code('''
+    import openai
+    from langchain.llms import DeepInfra
 
-    st.code('''
-        import openai
-        from langchain.llms import DeepInfra
+    llm = DeepInfra(deepinfra_api_token=deepinfra_token, model_id=model_id)
 
-        llm = DeepInfra(deepinfra_api_token=deepinfra_token, model_id=model_id)
+    response = llm(your_prompt)
 
-        response = llm(your_prompt)
-
-        print(response)
-    ''')
+    print(response)
+''')
 
 st.subheader('LLMs vs ChatModels')
 
