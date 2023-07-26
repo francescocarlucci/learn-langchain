@@ -23,8 +23,9 @@ The main components/tools that we will use to develop AI applications using Lang
 
 - LLMs (Large Language Models)
 - Prompts / Parsers
-- Indexes / Memory
 - Chains
+- Loaders
+- Memory
 - Agents 
 
 It's available fomr Python and JavaScript, but in this guide we will focus on the Python package.
