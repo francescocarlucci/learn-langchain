@@ -3,6 +3,7 @@ import streamlit as st
 from langchain.chains import LLMChain
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
+from langchain.chains import SequentialChain
 
 st.header('🔗 Chains')
 
@@ -64,3 +65,58 @@ some more complex example where we can explore the adavntages and the simplicity
 ''')
 
 st.subheader('Sequential Chain')
+
+st.write('''
+What about if we want to use multiple LLMs interactions and use the output of the first run as the
+input for the second chain? This is a perfect scenario to use the Sequential Chain.
+
+In this new example, we will ask our LLM to write a brief advertisement of our newly generated movie
+title, using the movie title as an input.
+''')
+
+with st.form("sequential_chain"):
+
+    movie = st.text_input("Movie", placeholder="The Green Mile")
+
+    execute = st.form_submit_button("🚀 Execute")
+
+    if execute:
+
+    	with st.spinner('Processing your request...'):
+
+	        llm = ChatOpenAI(openai_api_key=openai_key, temperature=0.9)
+
+	        first_prompt = ChatPromptTemplate.from_template('''
+	        I want you to act as a movie creative. Can you come up with an alternative name for the movie {movie}?\
+	        The name should honor the film story as it is. Please limit your answer to the name only.\
+	        If you don't know the movie, answer: "I don't know this movie"
+	        ''')
+
+	        first_chain = LLMChain(llm=llm, prompt=first_prompt, output_key="movie_title")
+
+	        second_prompt = ChatPromptTemplate.from_template('''
+	        Can you write a short advertisement of this new movie including his title {movie_title}?\
+	        Please limit it to 20 wprds and return only the advertisement copy.
+	        ''')
+
+	        second_chain = LLMChain(llm=llm, prompt=second_prompt, output_key="trailer")
+
+	        sequential_chain = SequentialChain(
+			    chains=[first_chain, second_chain],
+			    input_variables=["movie"],
+			    output_variables=["movie_title", "trailer"],
+			    verbose=True
+			)
+
+	        response = sequential_chain(movie)
+
+	        st.json(response)
+
+st.info("Couldn't we just ask for the title and the description in the first chain?", icon="❓")
+
+st.write('''
+We could, but implementing it in steps offer severl advantages:
+- better debugging and more control over the LLM responses
+- better responses due to more concise and specific prompts
+- more flexibility if we want dynamically assign new steps to different chains (Router Chain)
+''')

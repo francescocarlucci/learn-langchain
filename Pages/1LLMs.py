@@ -19,7 +19,7 @@ In this first tutorial we will see a basic example connecting with the OpenAI mo
 instanciate it and perform a basic interaction.
 ''')
 
-st.info('You need your own keys to run commercial models', icon="ℹ️")
+st.info("You need your own keys to run commercial models", icon="ℹ️")
 
 openai_key = st.text_input("OpenAI Api Key")
 
