@@ -26,7 +26,11 @@ st.subheader('Our first basic Chain')
 st.code('''
 llm = ChatOpenAI(openai_api_key=openai_key, temperature=0.9)
 
-prompt = ChatPromptTemplate.from_template("I want you to act as a movie creative. Can you come up with an alternative name for the movie {movie}? The name should honor the film story as it is. Please limit your answer to the name only.")
+prompt = ChatPromptTemplate.from_template(\'''
+I want you to act as a movie creative. Can you come up with an alternative name for the movie {movie}?\
+The name should honor the film story as it is. Please limit your answer to the name only.\
+If you don't know the movie, answer: "I don't know this movie"
+\''')
 
 chain = LLMChain(llm=llm, prompt=prompt)
 
@@ -74,6 +78,34 @@ In this new example, we will ask our LLM to write a brief advertisement of our n
 title, using the movie title as an input.
 ''')
 
+st.code('''
+llm = ChatOpenAI(openai_api_key=openai_key, temperature=0.9)
+
+first_prompt = ChatPromptTemplate.from_template(\'''
+I want you to act as a movie creative. Can you come up with an alternative name for the movie {movie}?\
+The name should honor the film story as it is. Please limit your answer to the name only.\
+If you don't know the movie, answer: "I don't know this movie"
+\''')
+
+first_chain = LLMChain(llm=llm, prompt=first_prompt, output_key="movie_title")
+
+second_prompt = ChatPromptTemplate.from_template(\'''
+Can you write a short advertisement of this new movie including his title {movie_title}?\
+Please limit it to 20 wprds and return only the advertisement copy.
+\''')
+
+second_chain = LLMChain(llm=llm, prompt=second_prompt, output_key="trailer")
+
+sequential_chain = SequentialChain(
+    chains=[first_chain, second_chain],
+    input_variables=["movie"],
+    output_variables=["movie_title", "trailer"],
+    verbose=True
+)
+
+response = sequential_chain(movie)
+''')
+
 with st.form("sequential_chain"):
 
     movie = st.text_input("Movie", placeholder="The Green Mile")
@@ -115,7 +147,7 @@ with st.form("sequential_chain"):
 st.info("Couldn't we just ask for the title and the description in the first chain?", icon="❓")
 
 st.write('''
-We could, but implementing it in steps offer severl advantages:
+We could, but implementing it in steps offer several advantages:
 - better debugging and more control over the LLM responses
 - better responses due to more concise and specific prompts
 - more flexibility if we want dynamically assign new steps to different chains (Router Chain)

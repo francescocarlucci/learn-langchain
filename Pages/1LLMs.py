@@ -19,6 +19,17 @@ In this first tutorial we will see a basic example connecting with the OpenAI mo
 instanciate it and perform a basic interaction.
 ''')
 
+st.code('''
+import openai
+from langchain.llms import OpenAI
+
+llm = OpenAI(openai_api_key=openai_key, temperature=0.5)
+
+response = llm(your_prompt)
+
+print(response)
+''')
+
 st.info("You need your own keys to run commercial models", icon="ℹ️")
 
 openai_key = st.text_input("OpenAI Api Key")
@@ -44,23 +55,23 @@ tools that will allow to build far more complex workflows. For now, let's apprec
 how we set it up using only 5 lines of code, and how easy is to plug in another model.
 ''')
 
-st.code('''
-    import openai
-    from langchain.llms import OpenAI
-
-    llm = OpenAI(openai_api_key=openai_key, temperature=0.5)
-
-    response = llm(your_prompt)
-
-    print(response)
-''')
-
 st.subheader('DeepInfra LLM')
 
 st.write('''
 In this example, we will use the same LangChain functions but plug in a different model.
 More specifically, we will use DeepInfra, which allows to run several model in the cloud.
 This is why we are specifying the model_id as parameter.
+''')
+
+st.code('''
+import openai
+from langchain.llms import DeepInfra
+
+llm = DeepInfra(deepinfra_api_token=deepinfra_token, model_id=model_id)
+
+response = llm(your_prompt)
+
+print(response)
 ''')
 
 deepinfra_token = st.text_input("DeepInfra Api Key")
@@ -83,17 +94,6 @@ with st.form("deepinfra_llm"):
         response = llm(prompt)        
 
         st.code(response)
-
-st.code('''
-    import openai
-    from langchain.llms import DeepInfra
-
-    llm = DeepInfra(deepinfra_api_token=deepinfra_token, model_id=model_id)
-
-    response = llm(your_prompt)
-
-    print(response)
-''')
 
 st.subheader('LLMs vs ChatModels')
 
