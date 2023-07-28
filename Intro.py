@@ -13,7 +13,7 @@ st.write('''
 LangChain is a framework to develop AI (artificial intelligence) applications in a
 better and faster way. You can think about it as a modular abstraction layer designed
 to  interact with various LLM (large language models), process and persist data,
-take actions and interact with the app environment. 
+perform complex tasks and take actions interacting with various APIs. 
 ''')
 
 st.subheader('Core Components')
