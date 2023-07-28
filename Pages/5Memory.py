@@ -20,8 +20,9 @@ the interactions are complete.
 st.subheader('ConversationBufferMemory')
 
 st.write('''
-This is the most basic mempry class and basically what it does, is to include previous messages
-in the new LLM prompt.
+This is the simplest memory class and basically what it does, is to include previous messages
+in the new LLM prompt. You can try to have a conversation with the chatbot, then ask questions
+about the previous message and the LLM will be able to answer them
 ''')
 
 st.info("In the following example, we will use the ConversationChain, another LangChain built-in chain", icon="ℹ️")
