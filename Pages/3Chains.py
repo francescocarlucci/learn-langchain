@@ -5,6 +5,11 @@ from langchain.chat_models import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
 from langchain.chains import SequentialChain
 
+st.set_page_config(
+    page_title="Learn LangChain | Chains",
+    page_icon="🔗"
+)
+
 st.header('🔗 Chains')
 
 st.write('''

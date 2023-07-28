@@ -2,7 +2,12 @@ import openai
 import streamlit as st
 from langchain.embeddings import OpenAIEmbeddings
 
-st.header('📈 Embeddings and Vector stores')
+st.set_page_config(
+    page_title="Learn LangChain | Embeddings and Vector Stores",
+    page_icon="📈"
+)
+
+st.header('📈 Embeddings and Vector Stores')
 
 st.write('''
 Embeddings are not a concept that belongs to LangChain, but more in general are a very important

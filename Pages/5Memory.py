@@ -7,6 +7,11 @@ from langchain.memory import ConversationBufferWindowMemory
 from langchain.memory import ConversationTokenBufferMemory
 from langchain.memory import ConversationSummaryMemory
 
+st.set_page_config(
+    page_title="Learn LangChain | Memory",
+    page_icon="💡"
+)
+
 st.header('💡 Memory')
 
 st.write('''

@@ -28,7 +28,7 @@ The main components/tools that we will use to develop AI applications using Lang
 - Memory
 - Agents 
 
-It's available fomr Python and JavaScript, but in this guide we will focus on the Python package.
+It's available fomr Python and JavaScript, but in this guide we will focus on the Python version.
 ''')
 
 st.subheader('Why LangChain')
@@ -41,6 +41,18 @@ are based on frameworks and not on plain PHP, Python, Ruby, whatever. The same g
 AI, we are building tools to lower the learning curve and allow a faster adoption.
 ''')
 
+st.subheader('Credits')
+
+st.write('''
+To better enjoy this LangChain course, you should have a basic understanding of software
+development fundamentals, and ideally some experience with python. If you don't, you can
+check these FreeCodeCamp resources to skill yourself up and come back!
+
+
+- [Learn Python](https://www.freecodecamp.org/news/learn-python-free-python-courses-for-beginners/)
+- [Intro to Programming](https://youtu.be/zOjov-2OZ0E)
+''')
+
 st.divider()
 
-st.write('Built with ❤️ by [Francesco Carlucci](https://francescocarlucci.com/)')
+st.write('A project by: [Francesco Carlucci](https://francescocarlucci.com/)')

@@ -5,6 +5,11 @@ from langchain.prompts import ChatPromptTemplate
 from langchain.output_parsers import ResponseSchema
 from langchain.output_parsers import StructuredOutputParser
 
+st.set_page_config(
+    page_title="Learn LangChain | Prompts and Parsers",
+    page_icon="📝"
+)
+
 st.header('📝  Prompts and Parsers')
 
 st.write('''

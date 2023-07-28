@@ -3,6 +3,11 @@ import streamlit as st
 from langchain.llms import OpenAI
 from langchain.llms import DeepInfra
 
+st.set_page_config(
+    page_title="Learn LangChain ! Large Language Models",
+    page_icon="🤖"
+)
+
 st.header('🤖 Large Language Models (LLMs)')
 
 st.write('''
