@@ -68,4 +68,4 @@ All the frameworks used in this mini-course belong to their owners:
 
 st.divider()
 
-st.write('A project by: [Francesco Carlucci](https://francescocarlucci.com/)')
+st.write('A project by: [Francesco Carlucci](https://francescocarlucci.com)')
