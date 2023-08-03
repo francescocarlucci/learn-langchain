@@ -5,7 +5,7 @@ st.set_page_config(
     page_icon="📚"
 )
 
-st.header('📚 Learn LangChain with Frenxi')
+st.header('📚 Learn LangChain with Francesco')
 
 st.subheader('Intro')
 
@@ -68,4 +68,5 @@ All the frameworks used in this mini-course belong to their owners:
 
 st.divider()
 
-st.write('A project by: [Francesco Carlucci](https://francescocarlucci.com)')
+st.write('A project by [Francesco Carlucci](https://francescocarlucci.com) - \
+Need AI training / consulting? [Get in touch](mailto:info@francescocarlucci.com)')

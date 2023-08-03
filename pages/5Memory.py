@@ -157,4 +157,7 @@ if prompt:
 
     st.json(st.session_state.memory.load_memory_variables({}))
 
+st.divider()
 
+st.write('A project by [Francesco Carlucci](https://francescocarlucci.com) - \
+Need AI training / consulting? [Get in touch](mailto:info@francescocarlucci.com)')

@@ -157,3 +157,8 @@ We could, but implementing it in steps offer several advantages:
 - better responses due to more concise and specific prompts
 - more flexibility if we want dynamically assign new steps to different chains (Router Chain)
 ''')
+
+st.divider()
+
+st.write('A project by [Francesco Carlucci](https://francescocarlucci.com) - \
+Need AI training / consulting? [Get in touch](mailto:info@francescocarlucci.com)')

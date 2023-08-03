@@ -11,9 +11,11 @@ st.set_page_config(
 st.header('🤖 Large Language Models (LLMs)')
 
 st.write('''
-Large Language Models (LLMs) are the backbone LangChain. The framework allows us
+Large Language Models (LLMs) are a type of artificial intelligence model trained
+on a vast amount of text data with the purpose is to generate human-like text based
+on inputs received, and they are the backbone LangChain. The framework allows us
 to connect and interact with all the most popular LLMs such as OpenAI, Cohere,
-Hugging Face, and any model hosted on Replicate.
+Hugging Face, any model hosted on Replicate, and many more.
 ''')
 
 st.subheader('OpenAI LLM')
@@ -111,3 +113,8 @@ For example, GPT-4 is trained as chat model, while GPT-3 as a LLM. Chat models
 work very well with LangChain Prompt Templates, which we will see in the next
 section.
 ''')
+
+st.divider()
+
+st.write('A project by [Francesco Carlucci](https://francescocarlucci.com) - \
+Need AI training / consulting? [Get in touch](mailto:info@francescocarlucci.com)')

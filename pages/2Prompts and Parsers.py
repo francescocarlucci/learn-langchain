@@ -201,3 +201,8 @@ with st.form("output_parsers"):
         output_dict = output_parser.parse(response.content)
 
         st.json(output_dict)
+
+st.divider()
+
+st.write('A project by [Francesco Carlucci](https://francescocarlucci.com) - \
+Need AI training / consulting? [Get in touch](mailto:info@francescocarlucci.com)')

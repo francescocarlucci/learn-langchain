@@ -92,3 +92,8 @@ st.write('''
 In the "Demo Projects" xection, we will see some sample application which makes good use of
 embeddings, document loaders and vector stores.
 ''')
+
+st.divider()
+
+st.write('A project by [Francesco Carlucci](https://francescocarlucci.com) - \
+Need AI training / consulting? [Get in touch](mailto:info@francescocarlucci.com)')
