@@ -25,7 +25,22 @@ st.subheader('Demo Project #1 | Invoice Data Extractor')
 
 st.write('https://invoice-data-extractor.streamlit.app/')
 
-st.write('Manual processing for invoices belongs to the past! Just drop an invoice in this app and get the data extracted and formatted as JSON.')
+st.write('''
+Manual processing for invoices belongs to the past! Just drop an invoice in this app and get
+the data extracted and formatted as JSON.
+''')
+
+st.divider()
+
+st.subheader('Demo Project #2 | Basic QA Over Custom Data')
+
+st.write('https://langchain-basic-qna.streamlit.app/')
+
+st.write('''
+AIs know lots of information, but they do not have access to our private archives, email
+conversations, chats, work documents, etc... In this demo we will see how to build a system
+the can "learn" and interact with our custom data.
+''')
 
 st.divider()
 

@@ -28,7 +28,7 @@ The main components/tools that LangCHain offers to develop AI applications using
 - Memory
 - Agents 
 
-LangChain is available for Python and JavaScript, but in this site we will focus on the Python version.
+LangChain is available for Python and JavaScript, but in this guide we will focus on the Python version.
 ''')
 
 st.subheader('Why LangChain')
