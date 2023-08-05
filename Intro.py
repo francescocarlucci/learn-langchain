@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Learn LangChain with Frenxi",
+    page_title="Learn LangChain with Francesco",
     page_icon="📚"
 )
 
