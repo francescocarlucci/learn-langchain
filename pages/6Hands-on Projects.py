@@ -44,5 +44,17 @@ the can "learn" and interact with our custom data.
 
 st.divider()
 
+st.subheader('Demo Project #3 | Summarization and Useful Chain Types')
+
+st.write('https://langchain-summarization.streamlit.app/')
+
+st.write('''
+Let's see how we can easly summarize web content using a purpose-specific chain, and how we
+can take advantage of different chain types to produce diverse outcomes and get around LLM
+token limits.
+''')
+
+st.divider()
+
 st.write('A project by [Francesco Carlucci](https://francescocarlucci.com) - \
 Need AI training / consulting? [Get in touch](mailto:info@francescocarlucci.com)')

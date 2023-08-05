@@ -141,8 +141,7 @@ with st.form("sequential_chain"):
 	        sequential_chain = SequentialChain(
 			    chains=[first_chain, second_chain],
 			    input_variables=["movie"],
-			    output_variables=["movie_title", "trailer"],
-			    verbose=True
+			    output_variables=["movie_title", "trailer"]
 			)
 
 	        response = sequential_chain(movie)
@@ -156,6 +155,14 @@ We could, but implementing it in steps offer several advantages:
 - better debugging and more control over the LLM responses
 - better responses due to more concise and specific prompts
 - more flexibility if we want dynamically assign new steps to different chains (Router Chain)
+''')
+
+st.subheader('To keep in mind:')
+
+st.write('''
+LangChain provides an impressive amount of chains with several level of complexity and different
+purposes. Studying them all can be overwhelming, but we will be using several of them in our
+hands-on tutorials, making it more fun to learn in a more practical context.
 ''')
 
 st.divider()
