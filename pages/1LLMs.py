@@ -85,22 +85,30 @@ deepinfra_token = st.text_input("DeepInfra Api Key")
 
 model_id = st.selectbox(
     'Model',
-    ('databricks/dolly-v2-12b', 'meta-llama/Llama-2-7b-hf')
+    ('google/flan-t5-small', 'databricks/dolly-v2-12b')
 )
 
 with st.form("deepinfra_llm"):
 
-    prompt = st.text_input("Prompt", placeholder="Write a short poem about clouds")
+    prompt = st.text_input("Prompt", placeholder="I like salads. What do we eat today?")
 
     execute = st.form_submit_button("🚀 Execute")
 
     if execute:
 
-        llm = DeepInfra(deepinfra_api_token=deepinfra_token, model_id=model_id)
+        with st.spinner('Processing your request...'):
 
-        response = llm(prompt)        
+            llm = DeepInfra(deepinfra_api_token=deepinfra_token, model_id=model_id)
 
-        st.code(response)
+            response = llm(prompt)        
+
+            st.code(response)
+
+st.write('''
+Take some time to play with prompts and observe how different LLMs provide us so
+different responses. This is why is very important to choose the right model based
+on our specific needs.
+''')
 
 st.subheader('LLMs vs ChatModels')
 
