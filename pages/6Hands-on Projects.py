@@ -56,5 +56,18 @@ token limits.
 
 st.divider()
 
+st.subheader('Demo Project #4 | WordPress Code Assistant')
+
+st.write('https://wordpress-code-assistant.streamlit.app/')
+
+st.write('''
+With this demo we start going beyond the "made-to-learn" tutorials, creating a tool
+that can actually help WordPress developers in the day to day work routine: a WordPress
+coding assistant that can write code, explain it and even cross check his own
+solutions.
+''')
+
+st.divider()
+
 st.write('A project by [Francesco Carlucci](https://francescocarlucci.com) - \
 Need AI training / consulting? [Get in touch](mailto:info@francescocarlucci.com)')
