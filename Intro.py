@@ -1,13 +1,13 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Learn LangChain with Francesco",
+    page_title="LangChain Crash Course",
     page_icon="📚"
 )
 
-st.header('📚 Learn LangChain with Francesco')
+st.header('📚 LangChain Crash Course')
 
-st.subheader('Intro')
+st.subheader('Build apps with AI and learn by doing!')
 
 st.write('''
 LangChain is a framework to develop AI (artificial intelligence) applications in a

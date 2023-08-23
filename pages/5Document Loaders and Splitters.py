@@ -18,7 +18,8 @@ st.set_page_config(
 st.header('✂️ Document Loaders and Text Splitters')
 
 st.write('''
-In the previous section we have seen how LLM applications need custom content to be provided in the
+One of the most revolutionary concept in the AI world, is having LLM to interact with our proprietary
+data. In the previous section we have seen how LLM applications need content to be provided in the
 form of embeddings, and to generate embeddings we need to first load content into our app. LangChain
 provides convenient classes and methods to load various types of documents and transform them to fit
 our application's needs.

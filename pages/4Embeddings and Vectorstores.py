@@ -54,13 +54,13 @@ st.subheader('Vector stores')
 st.write('''
 Another very important concept in LangChain is the vector store. Just like embedding are vector
 rappresentaion of data, vector stores are ways to store embeddings and interact with them running
-queries and operations. Vector sotres can be databases (eg: Chroma, Pinecone) or simply in-memory
-indexes (eg: DocArrayInMemorySearch). Vecotr databases are ofter referred as "long term memory"
-for Artificial Intelligence.
+queries and operations. Vector stores can be databases (eg: Pinecone, Vectara) or simply in-memory
+indexes (eg: DocArrayInMemorySearch). Vector databases are ofter referred as "long term memory"
+for Artificial Intelligence, because of course the data stored is persistent.
 ''')
 
 st.write('''
-In the "Demo Projects" xection, we will see some sample application which makes good use of
+In the "Hands-on Projects" section, we will see some sample application which makes good use of
 embeddings, document loaders and vector stores.
 ''')
 

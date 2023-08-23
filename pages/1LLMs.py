@@ -11,8 +11,8 @@ st.set_page_config(
 st.header('🤖 Large Language Models (LLMs)')
 
 st.write('''
-Large Language Models (LLMs) are a type of artificial intelligence model trained
-on a vast amount of text data with the purpose is to generate human-like text based
+Large Language Models (LLMs) are a type of neural network trained on a vast
+amount of text data, designed to understand and generate human-like text based
 on inputs received, and they are the backbone LangChain. The framework allows us
 to connect and interact with all the most popular LLMs such as OpenAI, Cohere,
 Hugging Face, any model hosted on Replicate, and many more.
