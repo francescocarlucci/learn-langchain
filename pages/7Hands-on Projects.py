@@ -69,5 +69,17 @@ solutions.
 
 st.divider()
 
+st.subheader('Demo Project #5 | Convert Voice Memos to Text')
+
+st.write('https://langchain-audio-to-text.streamlit.app/')
+
+st.write('''
+Let's move over text processing and have some fun automatically transcribing audio
+notes, and post-processing them to produce summaries, change the tone, or combine 
+into purpose-specific documents.
+''')
+
+st.divider()
+
 st.write('A project by [Francesco Carlucci](https://francescocarlucci.com) - \
 Need AI training / consulting? [Get in touch](mailto:info@francescocarlucci.com)')
